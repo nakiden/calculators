@@ -26,7 +26,7 @@ function operationClick(operation){
 
 function digitClick(tag){
 	if(operant!=null){
-		if(!bools)if(result!=null || secondVariable!=null){bools = true;firstVariable=null; secondVariable = null;}
+		if(!bools)if(result!=null || secondVariable!=null){bools = true; secondVariable = null;}
 		secondVariable = (secondVariable * 10) + tag ;
 		document.getElementById("resultWindow").value = secondVariable;
 	}else{
@@ -37,6 +37,9 @@ function digitClick(tag){
 }
 
 function operationEqual(){
+	if(result == 0){
+		firstVariable = null;
+	}
 	bools = false;
 	if (secondVariable == null && result == null) {secondVariable = firstVariable;}else{if(!result==0 && isNull==false){firstVariable = result;}}
 		switch(operant){
