@@ -1,0 +1,26 @@
+<html>
+<head>
+<title>Calculator</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/calculator.js"></script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<div id="calcFrame">
+			<input id="resultWindow" type="text" disabled>
+			<div id="buttons">
+				<table>
+					<tr><td><input type="button" onclick="digitClick(1)" value="1" id="button"><td><input type="button"  onclick="digitClick(2)" value="2" id="button"><td><input type="button"  onclick="digitClick(3)" value="3" id="button"></td><td><input type="button"onclick="operationClick('+')" value="+" id="buttonCom"></td></tr>
+					<tr><td><input type="button" onclick="digitClick(4)" value="4" id="button"><td><input type="button" onclick="digitClick(5)" value="5" id="button"><td><input type="button" onclick="digitClick(6)" value="6" id="button"></td><td><input type="button" onclick="operationClick('-')" value="-" id="buttonCom"></td></tr>
+					<tr><td><input type="button" onclick="digitClick(7)" value="7" id="button"><td><input type="button" onclick="digitClick(8)" value="8" id="button"><td><input type="button" onclick="digitClick(9)" value="9" id="button"></td><td><input type="button" onclick="operationClick('*')" value="*" id="buttonCom"></td></tr>
+					<tr><td><input type="button" onclick="clearClick()" value="C" id="buttonCom"><td><input type="button" onclick="digitClick(0)" value="0" id="button"><td><input type="button" onclick="operationEqual()" value="=" id="buttonCom"></td><td><input type="button" onclick="operationClick('/')" value="/" id="buttonCom"></td></tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p  style="color: white; padding-top:10px; text-align: center;"> Created by <span style="color: black; font-weight: bold;">Nakiden Viktor</span>
+	</div>
+</body>
+</html>

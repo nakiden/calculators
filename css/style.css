@@ -1,0 +1,66 @@
+.wrapper{
+	margin: 0 auto;
+	width: 1000px;
+	min-height: 100%;
+	background-color:
+}
+
+body{
+	background-image: url(../images/bg.jpg);
+	background-size: 100%;
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+}
+
+table {
+	margin-top: 50px;
+}
+
+#button{
+	background-color: rgba(5,5,5,0.5);
+	text-align: center;
+	width: 85px;
+	height: 100px;
+	color: white;
+}
+
+#buttonCom{
+	background-color: rgba(5,5,5,0.7);
+	text-align: center;
+	width: 85px;
+	height: 100px;
+	color: white;
+}
+
+td{
+	width:50px;
+}
+
+.footer{
+	height: 40px;	
+	background-color: #E18700;
+}
+
+#resultWindow{
+	width: 350px;
+	height: 100px;
+	padding-right: 15px;
+	font-size: 30px;
+	text-align: right;
+}
+
+td:hover{
+	background-color: rgba(0,0,0,0.9);
+}
+
+#calcFrame{
+	padding:25px;
+	width: 350px;
+	height: 550px;
+	margin-top: 50px;
+	margin-left: 300px;
+	background-color: rgba(0,0,0,0.5);
+}
+
