@@ -42,7 +42,6 @@ td{
 
 #resultWindow{
 	border: black solid 2px;
-	float : right;
 	width: 300px;
 	height: 100px;
 	padding-right: 15px;
@@ -61,7 +60,9 @@ td{
 	background-color: #E18700;
 	color: white;
 }
-
+table{
+	margin: -5px;
+}
 td:hover{
 	background-color: rgba(0,0,0,0.9);
 }
