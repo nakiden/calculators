@@ -12,23 +12,23 @@ var clicked = false;
 function operationClick(operation){
 	bools = false;
 	
-		switch(operation){
-			case '+':
-			operant = '+';
-				minus = false; 
-				break;
-			case '-': 
-				operant = '-'; 
-				break;
-			case '/': 
-				operant = '/';
-				minus = false;
-				break;
-			case '*': 
-				operant = '*';
-				minus = false;
-				break;
-		}
+	switch(operation){
+		case '+':
+		operant = '+';
+			minus = false; 
+			break;
+		case '-': 
+			operant = '-'; 
+			break;
+		case '/': 
+			operant = '/';
+			minus = false;
+			break;
+		case '*': 
+			operant = '*';
+			minus = false;
+			break;
+	}
 		
 	 if(!clicked && operant!=null){
 		 imEqual(operantPrev);
