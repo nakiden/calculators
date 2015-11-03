@@ -1,22 +1,30 @@
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
 <title>Calculator</title>
 <link rel="stylesheet" href="css/style.css">
-<script src="js/calculator.js"></script>
+<script src="js/calculator_class.js"></script>
+<script src="js/main.js"></script>
 </head>
 
 <body>
 	<div class="wrapper">
 		<div id="calcFrame">
-			<input id="resultWindow" type="text" disabled>
-			<input id="operantWindow" type="text" disabled>
-			<div id="buttons">
-				<table>
-					<tr><td><input type="button" onclick="digitClick(1)" value="1" id="button"><td><input type="button"  onclick="digitClick(2)" value="2" id="button"><td><input type="button"  onclick="digitClick(3)" value="3" id="button"></td><td><input type="button"onclick="operationClick('+')" value="+" id="buttonCom"></td></tr>
-					<tr><td><input type="button" onclick="digitClick(4)" value="4" id="button"><td><input type="button" onclick="digitClick(5)" value="5" id="button"><td><input type="button" onclick="digitClick(6)" value="6" id="button"></td><td><input type="button" onclick="operationClick('-')" value="-" id="buttonCom"></td></tr>
-					<tr><td><input type="button" onclick="digitClick(7)" value="7" id="button"><td><input type="button" onclick="digitClick(8)" value="8" id="button"><td><input type="button" onclick="digitClick(9)" value="9" id="button"></td><td><input type="button" onclick="operationClick('*')" value="*" id="buttonCom"></td></tr>
-					<tr><td><input type="button" onclick="clearClick()" value="C" id="buttonCom"><td><input type="button" onclick="digitClick(0)" value="0" id="button"><td><input type="button" onclick="operationEqual()" value="=" id="buttonCom"></td><td><input type="button" onclick="operationClick('/')" value="/" id="buttonCom"></td></tr>
-				</table>
+			<input id="resultWindow" type="text"  disabled>
+			<input id="operationWindow" type="text" disabled>
+			<div class="buttons">
+                <!--<table>
+                    <tr><td><button type="button" id="1" class="button"><span >1</span></button></td><td><button type="button"  id="2" class="button"><span >2</span></button></td><td><button type="button"  id="3" class="button"><span >3</span></button></td><td><button type="button" id="+" class="buttonCom"><span >+</span></button></td></tr>
+                    <tr><td><button type="button" id="4" class="button"><span >4</span></button></td><td><button type="button"  id="5" class="button"><span >5</span></button></td><td><button type="button"  id="6" class="button"><span >6</span></button></td><td><button type="button"  id="-" class="buttonCom"><span >-</span></button></td></tr>
+                    <tr><td><button type="button" id="7" class="button"><span >7</span></button></td><td><button type="button"  id="8" class="button"><span >8</span></button></td><td><button type="button"  id="9" class="button"><span >9</span></button></td><td><button type="button" id="*" class="buttonCom"><span >*</span></button></td></tr>
+                    <tr><td><button type="button" id="C" class="buttonCom"><span >C</span></button></td><td><button type="button"  id="0" class="button"><span >0</span></button></td><td><button type="button"  id="=" class="buttonCom"><span >=</span></button></td><td><button type="button"  id="/" class="buttonCom"><span >/</span></button></td></tr>
+                </table>-->
+                <table>
+					<tr><td><input type="button" onclick="mainCalculator.digitButtonClick(1)" value="1" class="button"><td><input type="button"  onclick="mainCalculator.digitButtonClick(2)" value="2" class="button"><td><input type="button"  onclick="mainCalculator.digitButtonClick(3)" value="3" class="button"></td><td><input type="button"onclick="mainCalculator.operationClick('+')" value="+" class="buttonCom"></td></tr>
+					<tr><td><input type="button" onclick="mainCalculator.digitButtonClick(4)" value="4" class="button"><td><input type="button" onclick="mainCalculator.digitButtonClick(5)" value="5" class="button"><td><input type="button" onclick="mainCalculator.digitButtonClick(6)" value="6" class="button"></td><td><input type="button" onclick="mainCalculator.operationClick('-')" value="-" class="buttonCom"></td></tr>
+					<tr><td><input type="button" onclick="mainCalculator.digitButtonClick(7)" value="7" class="button"><td><input type="button" onclick="mainCalculator.digitButtonClick(8)" value="8" class="button"><td><input type="button" onclick="mainCalculator.digitButtonClick(9)" value="9" class="button"></td><td><input type="button" onclick="mainCalculator.operationClick('*')" value="*" class="buttonCom"></td></tr>
+					<tr><td><input type="button" onclick="mainCalculator.clearButtonClick()" value="C" class="buttonCom"><td><input type="button" onclick="mainCalculator.digitButtonClick(0)" value="0" class="button"><td><input type="button" onclick="mainCalculator.equalButtonPressed()" value="=" class="buttonCom"></td><td><input type="button" onclick="mainCalculator.operationClick('/')" value="/" class="buttonCom"></td></tr>
+				</table><!---->
 			</div>
 		</div>
 	</div>
