@@ -2,7 +2,6 @@
 	margin: 0 auto;
 	width: 1000px;
 	min-height: 100%;
-	background-color:
 }
 
 body{
@@ -14,8 +13,11 @@ body{
 	height:100%;
 }
 
+span{
+	font-size: 25px;
+}
 
-#button{
+.button{
 	background-color: rgba(5,5,5,0.5);
 	text-align: center;
 	width: 85px;
@@ -23,7 +25,7 @@ body{
 	color: white;
 }
 
-#buttonCom{
+.buttonCom{
 	background-color: rgba(5,5,5,0.7);
 	text-align: center;
 	width: 85px;
@@ -49,7 +51,7 @@ td{
 	text-align: right;
 	margin-bottom: 25px;
 }
-#operantWindow{
+#operationWindow{
 	border: black solid 2px;
 	float:left;
 	width: 50px;
