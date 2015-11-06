@@ -19,7 +19,9 @@
         * @param id identifier of element
         */
        this.releaseValue = function(id) {
-           document.getElementById(id).value = null;
+           var line = "#" + id;
+           $(line).val(" ");
+           //document.getElementById(id).value = null;
        };
 
        /**
@@ -28,7 +30,9 @@
         * @param value value to be set
         */
        this.setValue = function(id, value) {
-           document.getElementById(id).value = value;
+           var line = "#" + id;
+           $(line).val(value);
+           //document.getElementById(id).value = value;
        };
 
        /**
@@ -75,6 +79,7 @@
         * @param tag Kind of digit
         */
        this.digitButtonClick = function(tag) {
+           tag = parseInt(tag);
            this.releaseValue(this.operantWindowName);
            this.isOperatorClicked = false;
 
@@ -113,22 +118,22 @@
 
        /**
         * function sets operator type
-        * @param operant Pressed button's id
+        * @param command Pressed button's id
         */
-       this.setOperation = function(operant) {
-           switch(operant) {
-               case '+':
+       this.setOperation = function(command) {
+           switch(command) {
+               case 'plus':
                    this.operant = '+';
                    this.isFirstOperatorNegative = false;
                    break;
-               case '-':
+               case 'minus':
                    this.operant = '-';
                    break;
-               case '/':
+               case 'divide':
                    this.operant = '/';
                    this.isFirstOperatorNegative = false;
                    break;
-               case '*':
+               case 'multiply':
                    this.operant = '*';
                    this.isFirstOperatorNegative = false;
                    break;
@@ -141,7 +146,6 @@
         */
        this.operationClick = function(operation){
            this.isOneTimeClicked = false;
-
            this.setOperation(operation);
 
            if (!this.isOperatorClicked && this.operant != null) {
@@ -210,3 +214,5 @@
            }
        };
    }
+
+
