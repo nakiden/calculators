@@ -17,13 +17,13 @@
          $( "#" + val ).bind('click', function() {
              mainCalculator.digitButtonClick(val);
          }
-         )
+       )
      });
 
      $.each( operationButtons, function( i, val ) {
          $( "#" + val ).bind('click', function() {
              mainCalculator.operationClick(val);
          }
-         )
+       )
      });
  });
